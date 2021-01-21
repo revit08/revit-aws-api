@@ -71,34 +71,34 @@
         }
       }
     },
-    "CreateLogGroup": {
+    "UserDashcreateLogGroup": {
       "Type": "AWS::Logs::LogGroup",
       "Properties": {
-        "LogGroupName": "/aws/lambda/revit-aws-api-dev-create"
+        "LogGroupName": "/aws/lambda/revit-aws-api-dev-user-create"
       }
     },
-    "ListLogGroup": {
+    "UserDashlistLogGroup": {
       "Type": "AWS::Logs::LogGroup",
       "Properties": {
-        "LogGroupName": "/aws/lambda/revit-aws-api-dev-list"
+        "LogGroupName": "/aws/lambda/revit-aws-api-dev-user-list"
       }
     },
-    "GetLogGroup": {
+    "UserDashgetLogGroup": {
       "Type": "AWS::Logs::LogGroup",
       "Properties": {
-        "LogGroupName": "/aws/lambda/revit-aws-api-dev-get"
+        "LogGroupName": "/aws/lambda/revit-aws-api-dev-user-get"
       }
     },
-    "UpdateLogGroup": {
+    "UserDashupdateLogGroup": {
       "Type": "AWS::Logs::LogGroup",
       "Properties": {
-        "LogGroupName": "/aws/lambda/revit-aws-api-dev-update"
+        "LogGroupName": "/aws/lambda/revit-aws-api-dev-user-update"
       }
     },
-    "DeleteLogGroup": {
+    "UserDashdeleteLogGroup": {
       "Type": "AWS::Logs::LogGroup",
       "Properties": {
-        "LogGroupName": "/aws/lambda/revit-aws-api-dev-delete"
+        "LogGroupName": "/aws/lambda/revit-aws-api-dev-user-delete"
       }
     },
     "IamRoleLambdaExecution": {
@@ -191,18 +191,18 @@
         }
       }
     },
-    "CreateLambdaFunction": {
+    "UserDashcreateLambdaFunction": {
       "Type": "AWS::Lambda::Function",
       "Properties": {
         "Code": {
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/revit-aws-api/dev/1611252550706-2021-01-21T18:09:10.706Z/revit-aws-api.zip"
+          "S3Key": "serverless/revit-aws-api/dev/1611256085613-2021-01-21T19:08:05.613Z/revit-aws-api.zip"
         },
         "Handler": "src/handler/createUser.createUser",
         "Runtime": "nodejs12.x",
-        "FunctionName": "revit-aws-api-dev-create",
+        "FunctionName": "revit-aws-api-dev-user-create",
         "MemorySize": 1024,
         "Timeout": 6,
         "Role": {
@@ -213,21 +213,21 @@
         }
       },
       "DependsOn": [
-        "CreateLogGroup"
+        "UserDashcreateLogGroup"
       ]
     },
-    "ListLambdaFunction": {
+    "UserDashlistLambdaFunction": {
       "Type": "AWS::Lambda::Function",
       "Properties": {
         "Code": {
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/revit-aws-api/dev/1611252550706-2021-01-21T18:09:10.706Z/revit-aws-api.zip"
+          "S3Key": "serverless/revit-aws-api/dev/1611256085613-2021-01-21T19:08:05.613Z/revit-aws-api.zip"
         },
         "Handler": "src/handler/listUser.listUser",
         "Runtime": "nodejs12.x",
-        "FunctionName": "revit-aws-api-dev-list",
+        "FunctionName": "revit-aws-api-dev-user-list",
         "MemorySize": 1024,
         "Timeout": 6,
         "Role": {
@@ -238,21 +238,21 @@
         }
       },
       "DependsOn": [
-        "ListLogGroup"
+        "UserDashlistLogGroup"
       ]
     },
-    "GetLambdaFunction": {
+    "UserDashgetLambdaFunction": {
       "Type": "AWS::Lambda::Function",
       "Properties": {
         "Code": {
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/revit-aws-api/dev/1611252550706-2021-01-21T18:09:10.706Z/revit-aws-api.zip"
+          "S3Key": "serverless/revit-aws-api/dev/1611256085613-2021-01-21T19:08:05.613Z/revit-aws-api.zip"
         },
         "Handler": "src/handler/getUser.getUser",
         "Runtime": "nodejs12.x",
-        "FunctionName": "revit-aws-api-dev-get",
+        "FunctionName": "revit-aws-api-dev-user-get",
         "MemorySize": 1024,
         "Timeout": 6,
         "Role": {
@@ -263,21 +263,21 @@
         }
       },
       "DependsOn": [
-        "GetLogGroup"
+        "UserDashgetLogGroup"
       ]
     },
-    "UpdateLambdaFunction": {
+    "UserDashupdateLambdaFunction": {
       "Type": "AWS::Lambda::Function",
       "Properties": {
         "Code": {
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/revit-aws-api/dev/1611252550706-2021-01-21T18:09:10.706Z/revit-aws-api.zip"
+          "S3Key": "serverless/revit-aws-api/dev/1611256085613-2021-01-21T19:08:05.613Z/revit-aws-api.zip"
         },
         "Handler": "src/handler/updateUser.updateUser",
         "Runtime": "nodejs12.x",
-        "FunctionName": "revit-aws-api-dev-update",
+        "FunctionName": "revit-aws-api-dev-user-update",
         "MemorySize": 1024,
         "Timeout": 6,
         "Role": {
@@ -288,21 +288,21 @@
         }
       },
       "DependsOn": [
-        "UpdateLogGroup"
+        "UserDashupdateLogGroup"
       ]
     },
-    "DeleteLambdaFunction": {
+    "UserDashdeleteLambdaFunction": {
       "Type": "AWS::Lambda::Function",
       "Properties": {
         "Code": {
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/revit-aws-api/dev/1611252550706-2021-01-21T18:09:10.706Z/revit-aws-api.zip"
+          "S3Key": "serverless/revit-aws-api/dev/1611256085613-2021-01-21T19:08:05.613Z/revit-aws-api.zip"
         },
         "Handler": "src/handler/deleteUser.deleteUser",
         "Runtime": "nodejs12.x",
-        "FunctionName": "revit-aws-api-dev-delete",
+        "FunctionName": "revit-aws-api-dev-user-delete",
         "MemorySize": 1024,
         "Timeout": 6,
         "Role": {
@@ -313,57 +313,57 @@
         }
       },
       "DependsOn": [
-        "DeleteLogGroup"
+        "UserDashdeleteLogGroup"
       ]
     },
-    "ListLambdaVersionGjKTy9E64JM7tJ63QUtvug0pj8SdwKlqdgLZMgFmKw": {
+    "UserDashlistLambdaVersionpDg4BCDYO3OFcVc2e9yWSRcBmAMvGoAF3hNjYsMr1w": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
-          "Ref": "ListLambdaFunction"
+          "Ref": "UserDashlistLambdaFunction"
         },
-        "CodeSha256": "EHYGMaN/pbCBeWqG7qqL+kNkCk7H0MFj2lHDprg4Exs="
+        "CodeSha256": "3trYy+11xlJjTKLLxcSoxX3eFZVMplA3HeuAcOMjhX8="
       }
     },
-    "GetLambdaVersion530WWcT9v3mACi0vUxYfzV3GeOTe6kkD8hM15Z4": {
+    "UserDashgetLambdaVersiondL0dLVG4m4WwKTEgNVHPJ6DBEPwEGclvYKxdHntVL4": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
-          "Ref": "GetLambdaFunction"
+          "Ref": "UserDashgetLambdaFunction"
         },
-        "CodeSha256": "EHYGMaN/pbCBeWqG7qqL+kNkCk7H0MFj2lHDprg4Exs="
+        "CodeSha256": "3trYy+11xlJjTKLLxcSoxX3eFZVMplA3HeuAcOMjhX8="
       }
     },
-    "UpdateLambdaVersiontvi1vus7jb1DACH8jOEgLRENloT9TheAp830Qfs": {
+    "UserDashdeleteLambdaVersiongpq6OTOaVbV9ieUwDzrPAoJg9Lc04KY4orpgDAtFmaY": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
-          "Ref": "UpdateLambdaFunction"
+          "Ref": "UserDashdeleteLambdaFunction"
         },
-        "CodeSha256": "EHYGMaN/pbCBeWqG7qqL+kNkCk7H0MFj2lHDprg4Exs="
+        "CodeSha256": "3trYy+11xlJjTKLLxcSoxX3eFZVMplA3HeuAcOMjhX8="
       }
     },
-    "DeleteLambdaVersionQvRnSf4yZcuFxIjfS0dc2MaE3d2m0hiAvcocNPAs1Q": {
+    "UserDashupdateLambdaVersionfemX38eNjzWxOopDl49pj81jaxcxAw5SM70iMQOJmLk": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
-          "Ref": "DeleteLambdaFunction"
+          "Ref": "UserDashupdateLambdaFunction"
         },
-        "CodeSha256": "EHYGMaN/pbCBeWqG7qqL+kNkCk7H0MFj2lHDprg4Exs="
+        "CodeSha256": "3trYy+11xlJjTKLLxcSoxX3eFZVMplA3HeuAcOMjhX8="
       }
     },
-    "CreateLambdaVersionevyhq7HASvBY2f4jRHNWMJAK79SFxJV8KvU2TQudY": {
+    "UserDashcreateLambdaVersionf0AZPQn6wakohuUSsLBWUbNluefbHNkI6TlI0ThJ3L8": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
-          "Ref": "CreateLambdaFunction"
+          "Ref": "UserDashcreateLambdaFunction"
         },
-        "CodeSha256": "EHYGMaN/pbCBeWqG7qqL+kNkCk7H0MFj2lHDprg4Exs="
+        "CodeSha256": "3trYy+11xlJjTKLLxcSoxX3eFZVMplA3HeuAcOMjhX8="
       }
     },
     "ApiGatewayRestApi": {
@@ -526,7 +526,7 @@
                 ":lambda:path/2015-03-31/functions/",
                 {
                   "Fn::GetAtt": [
-                    "CreateLambdaFunction",
+                    "UserDashcreateLambdaFunction",
                     "Arn"
                   ]
                 },
@@ -569,7 +569,7 @@
                 ":lambda:path/2015-03-31/functions/",
                 {
                   "Fn::GetAtt": [
-                    "ListLambdaFunction",
+                    "UserDashlistLambdaFunction",
                     "Arn"
                   ]
                 },
@@ -612,7 +612,7 @@
                 ":lambda:path/2015-03-31/functions/",
                 {
                   "Fn::GetAtt": [
-                    "GetLambdaFunction",
+                    "UserDashgetLambdaFunction",
                     "Arn"
                   ]
                 },
@@ -655,7 +655,7 @@
                 ":lambda:path/2015-03-31/functions/",
                 {
                   "Fn::GetAtt": [
-                    "UpdateLambdaFunction",
+                    "UserDashupdateLambdaFunction",
                     "Arn"
                   ]
                 },
@@ -698,7 +698,7 @@
                 ":lambda:path/2015-03-31/functions/",
                 {
                   "Fn::GetAtt": [
-                    "DeleteLambdaFunction",
+                    "UserDashdeleteLambdaFunction",
                     "Arn"
                   ]
                 },
@@ -710,7 +710,7 @@
         "MethodResponses": []
       }
     },
-    "ApiGatewayDeployment1611252535513": {
+    "ApiGatewayDeployment1611256070469": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -728,12 +728,12 @@
         "ApiGatewayMethodUsersIdVarDelete"
       ]
     },
-    "CreateLambdaPermissionApiGateway": {
+    "UserDashcreateLambdaPermissionApiGateway": {
       "Type": "AWS::Lambda::Permission",
       "Properties": {
         "FunctionName": {
           "Fn::GetAtt": [
-            "CreateLambdaFunction",
+            "UserDashcreateLambdaFunction",
             "Arn"
           ]
         },
@@ -765,12 +765,12 @@
         }
       }
     },
-    "ListLambdaPermissionApiGateway": {
+    "UserDashlistLambdaPermissionApiGateway": {
       "Type": "AWS::Lambda::Permission",
       "Properties": {
         "FunctionName": {
           "Fn::GetAtt": [
-            "ListLambdaFunction",
+            "UserDashlistLambdaFunction",
             "Arn"
           ]
         },
@@ -802,12 +802,12 @@
         }
       }
     },
-    "GetLambdaPermissionApiGateway": {
+    "UserDashgetLambdaPermissionApiGateway": {
       "Type": "AWS::Lambda::Permission",
       "Properties": {
         "FunctionName": {
           "Fn::GetAtt": [
-            "GetLambdaFunction",
+            "UserDashgetLambdaFunction",
             "Arn"
           ]
         },
@@ -839,12 +839,12 @@
         }
       }
     },
-    "UpdateLambdaPermissionApiGateway": {
+    "UserDashupdateLambdaPermissionApiGateway": {
       "Type": "AWS::Lambda::Permission",
       "Properties": {
         "FunctionName": {
           "Fn::GetAtt": [
-            "UpdateLambdaFunction",
+            "UserDashupdateLambdaFunction",
             "Arn"
           ]
         },
@@ -876,12 +876,12 @@
         }
       }
     },
-    "DeleteLambdaPermissionApiGateway": {
+    "UserDashdeleteLambdaPermissionApiGateway": {
       "Type": "AWS::Lambda::Permission",
       "Properties": {
         "FunctionName": {
           "Fn::GetAtt": [
-            "DeleteLambdaFunction",
+            "UserDashdeleteLambdaFunction",
             "Arn"
           ]
         },
@@ -943,34 +943,34 @@
         "Ref": "ServerlessDeploymentBucket"
       }
     },
-    "ListLambdaFunctionQualifiedArn": {
+    "UserDashlistLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "ListLambdaVersionGjKTy9E64JM7tJ63QUtvug0pj8SdwKlqdgLZMgFmKw"
+        "Ref": "UserDashlistLambdaVersionpDg4BCDYO3OFcVc2e9yWSRcBmAMvGoAF3hNjYsMr1w"
       }
     },
-    "GetLambdaFunctionQualifiedArn": {
+    "UserDashgetLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "GetLambdaVersion530WWcT9v3mACi0vUxYfzV3GeOTe6kkD8hM15Z4"
+        "Ref": "UserDashgetLambdaVersiondL0dLVG4m4WwKTEgNVHPJ6DBEPwEGclvYKxdHntVL4"
       }
     },
-    "UpdateLambdaFunctionQualifiedArn": {
+    "UserDashdeleteLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "UpdateLambdaVersiontvi1vus7jb1DACH8jOEgLRENloT9TheAp830Qfs"
+        "Ref": "UserDashdeleteLambdaVersiongpq6OTOaVbV9ieUwDzrPAoJg9Lc04KY4orpgDAtFmaY"
       }
     },
-    "DeleteLambdaFunctionQualifiedArn": {
+    "UserDashupdateLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "DeleteLambdaVersionQvRnSf4yZcuFxIjfS0dc2MaE3d2m0hiAvcocNPAs1Q"
+        "Ref": "UserDashupdateLambdaVersionfemX38eNjzWxOopDl49pj81jaxcxAw5SM70iMQOJmLk"
       }
     },
-    "CreateLambdaFunctionQualifiedArn": {
+    "UserDashcreateLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "CreateLambdaVersionevyhq7HASvBY2f4jRHNWMJAK79SFxJV8KvU2TQudY"
+        "Ref": "UserDashcreateLambdaVersionf0AZPQn6wakohuUSsLBWUbNluefbHNkI6TlI0ThJ3L8"
       }
     },
     "ServiceEndpoint": {

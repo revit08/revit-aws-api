@@ -30,11 +30,23 @@ module.exports.updateUser = (event, context, callback) => {
             id: event.pathParameters.id
         },
         ExpressionAttributeValues: {
-            ':t': data.task,
-            ':d': data.done,
+            ':rln': data.rollno,
+            ':spr': data.sprno,
+            ':nam': data.name,
+            ':eml': data.email,
+            ':onm': data.othernames,
+            ':dob': data.dob,
+            ':anv': data.anniversary,
+            ':rel': data.relationship,
+            ':nat': data.native,
+            ':loc': data.location,
+            ':wor': data.work,
+            ':soc': data.social,
+            ':img': data.img,
+            ':clm': data.claimed,
             ':u': datetime
         },
-        UpdateExpression: 'set task = :t, done = :d, updatedAt = :u'
+        UpdateExpression: 'set rollno = :rln, sprno = :spr, name = :nam, email = :eml, othernames = :onm, dob = :dob, anniversary = :anv, relationship = :rel, native = :nat, location = :loc, work = :wor, social = :soc, img = :img,claimed = :clm,updatedAt = :u'
     };
 
     dynamoDb.update(params, (error, data) => {

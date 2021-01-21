@@ -29,8 +29,20 @@ module.exports.createUser = (event, context, callback) => {
         TableName: 'users',
         Item: {
             id: uuid.v1(),
-            task: data.task,
-            done: false,
+            rollno: data.rollno,
+            sprno: data.sprno,
+            name: data.name,
+            email: data.email,
+            othernames: data.othernames,
+            dob: data.dob,
+            anniversary: data.anniversary,
+            relationship: data.relationship,
+            native: data.native,
+            location: data.location,
+            work: data.work,
+            img: data.img,
+            social: data.social,
+            claimed: data.claimed,
             createdAt: datetime,
             updatedAt: datetime
         }
